@@ -1,0 +1,173 @@
+doctype html
+html(lang='en')
+  head
+    include ./head.pug
+    title 大军 - 主页
+  body
+    include ./navbar
+    +navbar
+      li.nav-item
+        a.nav-link(href='#') 博客
+      li.nav-item.active
+        a.nav-link(href='#') 主页
+      li.nav-item
+        a.nav-link(href='/projects') 项目
+    .about-header.mt-3.mx-auto
+      .container.mb-5
+        .row
+          .col-12.col-md-7.col-lg-9.align-self-center
+            h1 About myself
+            table.table
+              tbody
+                tr
+                  th
+                    | 名字
+                  td
+                    | 大军
+                tr
+                  th
+                    | 电邮
+                  td
+                    | febor@163.com
+            p
+              | 你好. 欢迎来到我的主页!
+              br
+              br
+              | 这是我的个人主页.
+            p
+              | 我是一位产品开发工作者.
+            p
+              | 曾经从事电信产品,图形图像,非标自动化产品的研究开发工作.
+            p
+              | 如果你想联系我,请给我发送邮件.
+              br
+              br
+              | 感谢你花时间来到我的站点,希望你经常再次光临!
+          .col-12.col-md-5.col-lg-3.justify-content-center.mb-2.d-flex
+            img.img-fluid.mx-auto.d-block.align-self-center(src='/images/myself.webp', alt='Krish Self Portrait')
+      .container.mt-5
+        h1 技术能力:
+      .container
+        p
+          | 至今, 曾经拥有多种计算机语言的使用经验. 包括 C, C++, VC++, ObjectC等.
+        p
+          | 电子硬件设计,数字和模拟电路和嵌入式单片机固件研发.
+        p
+          | 计算机软件设计,涉及 信息系统平台和终端, 图形图像算法, 机器学习方面.
+        p
+          | 非标准化工业自动化系统集成.
+      .container.mt-5
+        h1 工作经历
+      .container
+        #experienceAccordion.accordion
+          .card
+            #headingOne.card-header
+              h5.mb-0
+                button.btn.btn-link.text-left(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                  i.fas.fa-industry.fa-lg
+                  |  武汉众杰科技有限公司.
+                  br
+                  | (2011年8月 - 今)
+            #collapseOne.collapse(aria-labelledby='HEAD_01', data-parent='#experienceAccordion')
+              .card-body
+                p
+                  | 自从2011年8月, 我在武汉众杰科技有限公司工作, 担任工程师, 技术经理. 
+                  | 在职期间,完成多个项目:
+                ul.mt-3
+                  li
+                    | 适用于医疗器械行业的全自动切管机;
+                  li
+                    | 基于图像处理的三维重建软件;
+                  li
+                    | 自主研发的高速工业相机.
+          .card
+            #headingTwo.card-header
+              h5.mb-0
+                button.btn.btn-link.collapsed.text-left(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                  i.fas.fa-industry.fa-lg
+                  |  武汉精伦电子有限公司
+                  br
+                  | (2001年8月 - 2011年8月)
+            #collapseTwo.collapse(aria-labelledby='HEAD_02', data-parent='#experienceAccordion')
+              .card-body
+                p
+                  | 担任研究开发中心工程师, 经理.
+                  | 完成多个产品项目:
+                ul.mt-3
+                  li
+                    | 国标无绳电话机, 无线传真机.
+                  li
+                    | 400MHz商用集群电话机.
+                  li
+                    | 基于嵌入式系统的公用电话系统.
+                p
+                  | 更为详细的经历介绍, 请联系我.
+      .container.mt-5
+        h1 教育经历
+      .container
+        #educationAccordion.accordion
+          .card
+            #headingThree.card-header
+              h5.mb-0
+                button.btn.btn-link.text-left(type='button', data-toggle='collapse', data-target='#collapseThree', aria-expanded='true', aria-controls='collapseThree')
+                  i.fas.fa-university.fa-lg
+                  | 华中科技大学(原华中理工大学)
+                  br
+                  | 电子信息工程系 电子技术专业
+                  br
+                  | (1991-1995)
+            #collapseThree.collapse(aria-labelledby='HEAD_03', data-parent='#educationAccordion')
+              .card-body
+                | 在校经历.
+                ul.mt-3
+                  li
+                    | 担任班级学习委员, 系二课部长.
+                  li
+                    | 连续三年荣获校奖学金
+                table.table
+                  thead
+                    tr
+                      th(scope='col') 年份
+                      th(scope='col') 课程
+                  tbody
+                    tr
+                      th(scope='row') 1992
+                      td
+                        | 程序设计III（C），计算机体系结构.
+                        | 计算机硬件，数据库，逻辑，编程推理.
+                        | 离散数学，数学.
+                    tr
+                      th(scope='row') 1993
+                      td
+                        | 软件工程算法，以人为本的设计，计算机体系结构II，
+                        | 操作系统,网络和通信，软件工程设计，编译器，并发，
+                        | 简介AI，计算模型，统计数据.
+                    tr
+                      th(scope='row') 1994
+                      td
+                        | 计算工程师业务，高级数据库，图形I，网络和Web安全,
+                        | 仿真与建模，生物信息学，信息论与代码，软件工程II.
+                    tr
+                      th(scope='row') 1995
+                      td
+                        | 隐私增强技术，密码工程，大规模数据管理，
+                        | 高级计算机图形学，复杂性，软件可靠性，软件工程III，
+                        | 知识表示
+          .card
+            #headingFour.card-header
+              h5.mb-0
+                button.btn.btn-link.collapsed.text-left(type='button', data-toggle='collapse', data-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                  i.fas.fa-school.fa-lg
+                  | 华中科技大学(原华中理工大学)
+                  br
+                  | 电子信息工程系 通信工程专业
+                  br
+                  | (2001-2003)
+            #collapseFour.collapse(aria-labelledby='HEAD_04', data-parent='#educationAccordion')
+              .card-body
+                p
+                  | 在校期间, 各门功课均取得优异成绩.
+                  br
+                  | 我也活跃于羽毛球，足球。 
+                  | 在系里建立了一个电器维修队,休息时间为他人维修电器。
+    include ./footer.pug

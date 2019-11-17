@@ -1,0 +1,195 @@
+doctype html
+html(lang='en')
+  head
+    include ./head.pug
+    link(rel='stylesheet', href='projects.css', integrity='sha384-OLj0QjZKb83+2Vd40TykJuKLfMk8hvZSQ0a7NUF7mtx2zautakO4MRy0EHDntL43', crossorigin='anonymous')
+    title 大军 - 项目
+  body
+    include ./navbar.pug
+    +navbar
+      li.nav-item
+        a.nav-link(href='#') 博客
+      li.nav-item
+        a.nav-link(href='/') 主页
+      li.nav-item.active
+        a.nav-link(href='#') 项目
+    .project-header.mt-3.mb-5.mx-auto
+      .container
+        h1 当前的项目和贡献
+        p
+          | 这些年主要在从事工业自动化系统集成工作. 
+          | 自己对各种软件项目也很感兴趣. 随时关注Github上一些项目的进展.
+        #accordion.my-3
+          .card
+            #headingOne.card-header
+              h5.mb-0
+                | 精伦电子 2001年-2004年. 
+                a(href='http://www.routon.com') [官网]
+                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+                  i.fas.fa-caret-down
+            #collapseOne.collapse.show(aria-labelledby='HEAD_01', data-parent='#accordion')
+              .card-body
+                | 核心理念
+                | 做能够给人们带来美好感觉的精美产品
+                | 营造能让员工快乐工作、快乐生活的内部环境
+                | 鼓励创新，适应变化，努力实现难以达到的目标
+                | 倡导诚实、正直、互助、敬业的企业文化
+                | 发展战略
+                | 利用公司在各类智能终端领域多年积累的经验，努力发展技术，整合资源，走价值增长型高科技道路，打造专注于行业产品、高端电子消费品的一流企业。
+          .card
+            #headingTwo.card-header
+              h5.mb-0
+                | 中国航天科技集团 2011年-2015年. 
+                a(href='http://www.spacechina.com/n25/index.html') [官网]
+                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                  i.fas.fa-caret-down
+            #collapseTwo.collapse(aria-labelledby='HEAD_02', data-parent='#accordion')
+              .card-body
+                | 中国航天科技集团有限公司在出成果、出人才的同时，大力弘扬航天传统精神、“两弹一星”精神和载人航天精神，
+                | 培育形成了以“以国为重、以人为本、以质取信、以新图强”为核心价值观，以“严慎细实、诚勇勤和”为企业作风，
+                | 具有鲜明时代特征和航天特色的企业文化，为实现建设航天强国的发展目标营造了良好氛围。
+          .card
+            #headingThree.card-header
+              h5.mb-0
+                | Apple 独立开发. 
+                a(href='https://developer.apple.com/ios/') [iOS,
+                a(href='https://developer.apple.com/macos/') MacOS,
+                a(href='https://developer.apple.com/watchos/') WatchOS]
+                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                  i.fas.fa-caret-down
+            #collapseThree.collapse(aria-labelledby='HEAD_03', data-parent='#accordion')
+              .card-body
+                | 让您的想法变为现实
+                | 借助功能强大的 Xcode、简单易用的 Swift，以及 Apple 前沿技术的革命性功能，
+                | 您可以自由发挥，打造前所未有的新颖 app。
+        p
+          | 项目照片展示
+        ul
+          li
+            | 风光图片.
+          li
+            | 外国图片.
+          li
+            | WebP格式图片.
+          li
+            | 轮播图片.
+        p
+        .row
+          .col
+            #carouselIndicators.carousel.slide(data-ride='carousel')
+            .carousel-inner
+              .carousel-item.active
+                img.d-block.w-100(src='/images/Photo01.webp', alt='图片 01')
+              .carousel-item
+                img.d-block.w-100(src='/images/Photo02.webp', alt='图片 02')
+              .carousel-item
+                img.d-block.w-100(src='/images/Photo03.webp', alt='图片 03')
+              .carousel-item
+                img.d-block.w-100(src='/images/Photo04.webp', alt='图片 04')
+            a.carousel-control-prev(href='#carouselIndicators', role='button', data-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+            a.carousel-control-next(href='#carouselIndicators', role='button', data-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Next
+
+    .project-header.mt-5.mx-auto
+      .container
+        h1 产品图片展示
+        p
+          | 这些图片为产品图片.
+      .container
+        .row
+          .col-12.col-md-6.mt-5
+            .project-card.g-100
+              img.project-card-img-top(src='/images/Photo05.webp', alt='图片 05')
+              .project-card-content
+                .project-card-title
+                  i.show.fa.fa-ellipsis-v.fa-lg.float-right.mt-2
+                  h5 图片 05
+                p.project-card-text
+                  ul
+                   li 简单介绍 1 ...
+                   li 简单介绍 2 ...
+                   a(href='https://www.baidu.com') 更多图片
+              .project-card-reveal.pop-out
+                .project-card-title
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h5 图片 05
+                p.project-card-text
+                  ul
+                   li 详细介绍 1 ...
+                   li 详细介绍 2 ...
+                   a(href='https://www.baidu.com') 更多图片
+          .col-12.col-md-6.mt-5
+            .project-card.g-100
+              img.project-card-img-top(src='/images/Photo06.webp', alt='图片 06')
+              .project-card-content
+                .project-card-title
+                  i.show.fa.fa-ellipsis-v.fa-lg.float-right.mt-2
+                  h5 图片 06
+                p.project-card-text
+                  ul
+                   li 简单介绍 1 ...
+                   li 简单介绍 2 ...
+                   a(href='https://www.baidu.com') 更多图片
+              .project-card-reveal.pop-out
+                .project-card-title
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h5 图片 06
+                p.project-card-text
+                  ul
+                   li 详细介绍 1 ...
+                   li 详细介绍 2 ...
+                   a(href='https://www.baidu.com') 更多图片     
+          .col-12.col-md-6.mt-5
+            .project-card.g-100
+              img.project-card-img-top(src='/images/Photo07.webp', alt='图片 07')
+              .project-card-content
+                .project-card-title
+                  i.show.fa.fa-ellipsis-v.fa-lg.float-right.mt-2
+                  h5 图片 07
+                p.project-card-text
+                  ul
+                   li 简单介绍 1 ...
+                   li 简单介绍 2 ...
+                   a(href='https://www.baidu.com') 更多图片
+              .project-card-reveal.pop-out
+                .project-card-title
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h5 图片 07
+                p.project-card-text
+                  ul
+                   li 详细介绍 1 ...
+                   li 详细介绍 2 ...
+                   a(href='https://www.baidu.com') 更多图片        
+          .col-12.col-md-6.mt-5
+            .project-card.g-100
+              img.project-card-img-top(src='/images/Photo08.webp', alt='图片 08')
+              .project-card-content
+                .project-card-title
+                  i.show.fa.fa-ellipsis-v.fa-lg.float-right.mt-2
+                  h5 图片 08
+                p.project-card-text
+                  ul
+                   li 简单介绍 1 ...
+                   li 简单介绍 2 ...
+                   a(href='https://www.baidu.com') 更多图片
+              .project-card-reveal.pop-out
+                .project-card-title
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h5 图片 08
+                p.project-card-text
+                  ul
+                   li 详细介绍 1 ...
+                   li 详细介绍 2 ...
+                   a(href='https://www.baidu.com') 更多图片   
+    include ./footer.pug
+    script(src='/js/card.js', integrity='sha384-dQockkvyKFWCAZmfqHeMl9WSqLM60ywJCZuI3LRkwHCgTpVtg63q6agupD15xaUc', crossorigin='anonymous')
+    script(src='/js/carousel.js', crossorigin='anonymous')
+
+
